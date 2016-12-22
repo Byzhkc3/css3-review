@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu CSS3 Animation</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        a{
+            text-decoration: none;
+        }
+        #menu{
+            height: 70px;
+            width:100%;
+            background: #2c2c2c;
+        }
+        #menu > button{
+            float: left;
+            margin:15px 0px 0px 20px;
+            padding:10px;
+        }
+        #menu1{
+            position:absolute;
+            left:20px;
+            background:#333;
+            width:140px;
+            height:auto;
+            padding:0px 2px 2px 2px;
+            z-index:10;
+            transform-origin:50% 0%;
+            transform:perspective(800px) rotateX(90deg);
+            transition:transform .3s linear 0s;
+        }
+        #menu1>a{
+            display:block;
+            color:#fff;
+            background:#666;
+            padding:12px 0px 12px 12px;
+            margin:1px;
+            font-size:13px;
+            transition:background 0.2s linear 0s,color 0.2s linear 0s;
+        }
+        #menu1 > a:hover{
+            background:#888;
+            color:#fff;
+        }
+    </style>
+
+    <script>
+        function toggleMenu(Menu){
+            var Menu = document.getElementById(Menu);
+            var open = Menu.dataset.open;
+            // 判断是否打开menu
+            if(open == 'no'){
+                Menu.style.transform = "perspective(800px) rotateX(0deg)";
+                Menu.dataset.open="yes";
+            }else{
+                Menu.style.transform = "perspective(800px) rotateX(90deg)";
+                Menu.dataset.open='no';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <button id="menuBtn" onclick="toggleMenu('menu1')">Menu</button>
+    </div>
+
+    <nav id="menu1" class="menu1" data-open="no">
+        <a href="#">selection a</a>
+        <a href="#">selection b</a>
+        <a href="#">selection c</a>
+        <a href="#">selection d</a>
+        <a href="#">selection e</a>
+    </nav>
+
+</body>
+</html>
