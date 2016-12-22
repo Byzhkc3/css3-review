@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变按钮</title>
+    <style>
+        body{
+            margin:0px;
+            background:#000;
+        }
+        #nav{
+            width: 100%;
+            padding: 24px;
+            border-bottom:1px #ccc dashed;
+        }
+
+        #nav>a{
+            font-size:17px;
+            background:#333;
+            padding:12px 24px;
+            color:#999;
+            margin-right:10px;
+            border-radius:3px;
+            text-decoration:none;
+            transition: background .5s linear 0s,color .5s linear 0s;
+            -moz-transition: background .5s linear 0s,color .5s linear 0s;
+            -o-transition: background .5s linear 0s,color .5s linear 0s;
+            -ms-transition: background .5s linear 0s,color .5s linear 0s;
+            -webkit-transition: background .5s linear 0s,color .5s linear 0s;
+        }
+        #nav>a:hover{
+            background: olivedrab;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">User</a>
+        <a href="#">Concat</a>
+        <a href="#">About</a>
+    </div>
+</body>
+</html>
