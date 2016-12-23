@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d盒子</title>
+    <style>
+        .Box{
+            width:240px;
+            height:200px;
+            margin: 10px;
+            float:left;
+        }
+        .Box >.font{
+            position:absolute;
+            transform:perspective(600px) rotateY(0deg);
+            background: #FC0;
+            width: 240px;
+            height: 200px;
+            border-radius:7px;
+            backface-visibility: hidden;
+            transition:transform .5s linear 0s;
+
+        }
+        .Box >.back{
+            position:absolute;
+            transform:perspective(600px) rotateY(180deg);
+            background: #80bfff;
+            width: 240px;
+            height: 200px;
+            border-radius:7px;
+            backface-visibility: hidden;
+            transition:transform .5s linear 0s;
+
+        }
+        .Box:hover >.font{
+            transform:perspective(600px) rotateY(-180deg);
+        }
+        .Box:hover >.back{
+            transform:perspective(600px) rotateY(0deg);
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="Box">
+        <div class="back">box1 back</div>
+        <div class="font">box1 font</div>
+    </div>
+
+    <div class="Box">
+        <div class="back">box2 back</div>
+        <div class="font">box2 font</div>
+    </div>
+
+    <div class="Box">
+        <div class="back">box3 back</div>
+        <div class="font">box3 font</div>
+    </div>
+</body>
+</html>
