@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关键帧动画</title>
+    <style>
+        #bot_wrap{
+            width:285px;
+            height:420px;
+            margin:0px auto;
+            border:1px #f00 dashed;
+        }
+
+        #bot_wrap>#bot{
+            position:relative;
+            width:128px;
+            height:128px;
+            top:0px;
+            background: url("img/head.png") no-repeat;
+            margin:0px auto;
+            animation:bot_float ease 5s infinite;
+        }
+        @keyframes bot_float{
+            50% {top:250px;}
+            100%{top:0px;}
+        }
+        #bot_wrap>#bot_shadow{
+            position: relative;
+            height:16px;
+            background: #999;
+            opacity:0.1;
+            border-radius:100%;
+            margin:0px 0px 0px 0px ;
+            top:250px;
+            animation:bot_shadow ease 5s infinite;
+        }
+        @keyframes bot_shadow{
+            50%{margin:0px 20% 0px 20%;opacity:0.7;}
+            100%{margin:0px 0px 0px 0px;opacity:0.7;}
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="bot_wrap">
+        <div id="bot"></div>
+        <div id="bot_shadow"></div>
+    </div>
+</body>
+</html>
